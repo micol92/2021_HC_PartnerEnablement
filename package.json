@@ -1,0 +1,30 @@
+{
+  "name": "bstore",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^4",
+    "@sap/hana-client": "^2.7.23",
+    "@sap/hdi-deploy": "^4.0.3",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.0"
+  },
+  "scripts": {
+    "start": "cds run"
+  },
+  "cds": {
+    "hana": {
+      "syntax": "hdi"
+    },
+    "requires": {
+      "db": {
+        "kind": "hana"
+      }
+    }
+  }
+}

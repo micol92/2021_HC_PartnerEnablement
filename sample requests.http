@@ -1,0 +1,16 @@
+### Submit Orders
+POST http://localhost:4004/browse/submitOrder
+Content-Type: application/json
+
+{ "book":201, "amount":50 }
+
+# Sending this three times should result in a 409: 5 exceeds stock for book #201
+
+### Check books entity that stock was reduced
+GET http://localhost:4004/admin/Books(201)
+
+### Check books entity that stock was reduced
+GET http://localhost:4004/admin/Books_Texts
+
+
+###insert into demo_ns_books_texts values ('kr',207,'Jane Eyre 한글','Jane Eyre desc 한글');
